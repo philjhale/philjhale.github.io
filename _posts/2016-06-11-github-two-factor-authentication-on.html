@@ -7,6 +7,7 @@ tags:
 modified_time: '2016-06-11T21:33:26.847+01:00'
 blogger_id: tag:blogger.com,1999:blog-3610670596953898701.post-2442033869919190518
 blogger_orig_url: http://www.philjhale.com/2016/06/github-two-factor-authentication-on.html
+redirect_from: /2016/06/github-two-factor-authentication-on.html
 ---
 
 <p>Two factor authentication is great but until recently I’ve had numerous problems getting it to work with repositories on GitHub. Happily I’ve found the easy way. This only applies to Windows users and only works over HTTPS, not SSH.</p> <p>First install <a href="https://chocolatey.org/">Chocolatey</a>.</p> <p>Now open a command line as an administrator and install two Chocolatey packages. </p> <p><code>cinst git -y</code> <br><code>cinst git-credential-manager-for-windows -y</code></p> <p>That’s it. <a href="https://github.com/Microsoft/Git-Credential-Manager-for-Windows">Git credential manager</a> is where the magic happens. When you take an action on your repository, over HTTPS, you’ll be asked for your username, password and your two factor authentication code. Credential manager then automatically creates a personal access token with read/write permissions on that repository and stores the token. All subsequent git commands for the repository use the stored access token, no further authentication is required. Simple.</p>
