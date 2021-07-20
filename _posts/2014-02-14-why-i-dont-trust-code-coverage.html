@@ -1,0 +1,15 @@
+---
+layout: post
+title: Why I don't trust code coverage
+date: '2014-02-14T19:48:00.000Z'
+author: Phil Hale
+tags:
+- unit testing
+- c#
+modified_time: '2014-02-26T08:45:20.440Z'
+thumbnail: http://3.bp.blogspot.com/-TazI3IhQauY/Uv5xloLFZOI/AAAAAAAAAJM/9fG-q_XvIyM/s72-c/100+percent+coverage+small.png
+blogger_id: tag:blogger.com,1999:blog-3610670596953898701.post-3826634108856293416
+blogger_orig_url: http://www.philjhale.com/2014/02/why-i-dont-trust-code-coverage.html
+---
+
+<div class="separator" style="clear: both; text-align: center;"></div><div class="separator" style="clear: both; text-align: left;"><span style="font-family: Arial, Helvetica, sans-serif;">I had a discussion with a colleague about code coverage the other day where I suggested that 100% code coverage meant very little because you may have covered every line of code, but not necessarily every path through the code. After the conversion ended I thought I'd better check I wasn't talking utter nonsense.</span></div><br style="font-family: Arial, Helvetica, sans-serif;" /><span style="font-family: Arial, Helvetica, sans-serif;">Here is a contrived method and two unit tests.</span><br /><br style="font-family: Arial, Helvetica, sans-serif;" /><script src="https://gist.github.com/philjhale/8998250.js"></script> <script src="https://gist.github.com/philjhale/8998301.js"></script> <span style="font-family: Arial, Helvetica, sans-serif;">Here are the code coverage results.</span><br /><div class="separator" style="clear: both; text-align: center;"><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-TazI3IhQauY/Uv5xloLFZOI/AAAAAAAAAJM/9fG-q_XvIyM/s1600/100+percent+coverage+small.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-TazI3IhQauY/Uv5xloLFZOI/AAAAAAAAAJM/9fG-q_XvIyM/s1600/100+percent+coverage+small.png" height="60" width="400" /></a></div><span style="font-family: Arial, Helvetica, sans-serif;"><br /><br />As you can see, 100% code coverage is reported but not all paths through the code have been tested. Yes, the code is dreadful but I think it makes my point. Just because every line of your code has been tested, it doesn't mean that your code has been <i>thoroughly</i> tested.<br /><br />To make matters worse, lets say 90% code coverage is reported by whatever tool you use, there's no indication of the importance of the code that has been tested. What if the 10% of code that has minimal coverage is the most critical part of your application?<br /><br />Don't get me wrong, I'm not saying code coverage is a complete waste of time. As a general indication that an area of code needs a few more tests it's great. But other than that, not so much.</span>
