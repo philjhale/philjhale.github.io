@@ -71,4 +71,4 @@ Go to your DNS provider and change the www CNAME record to point www.philjhale.c
 
 ## That's all
 
-
+Now everything should be working. All that's left to to say thank you to [Kris Rice](https://krisrice.io/2017-10-06-migrating-my-blog-from-blogger-to-github-pages-with-jekyll/) and [Dylan Beattie](https://dylanbeattie.net/2019/08/14/migrating-from-blogger-to-github-pages.html). This blog was cobbled together mostly from a combination of their blog posts on the same subject.
